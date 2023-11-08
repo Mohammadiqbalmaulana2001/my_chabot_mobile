@@ -5,24 +5,23 @@ import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-nativ
 import { useNavigation } from '@react-navigation/native';
 
 
-
-export default function welcomeScreens() {
+export default function WelcomeScreens() {
     const navigation = useNavigation();
     return (
-        <SafeAreaView className = "flex-1 flex justify-around bg-white">
+        <SafeAreaView className = "bg-white flex-1 flex justify-around ">
             <View className = "space-y-2">
-                <Text style = {{fontSize: wp(10)}} className = "text-center text-4xl font-bold text-gray-700">
-                    M_L4BQ1_bot
+                <Text style = {{fontSize: wp(10)}} className = "text-center text-4xl font-bold text-fuchsia-500">
+                    L4BQ1_bot
                 </Text>
-                <Text style = {{fontSize: wp(4)}}  className = "text-center tracking-wider text-gray-600 font-semibold ">
+                <Text style = {{fontSize: wp(4)}}  className = "text-center tracking-wider text-fuchsia-400 font-semibold ">
                     masa depan ada di sini, didukung oleh AI
                 </Text>
             </View>
-            <View className= "flex-row justify-center">
+            <View className= "flex-row justify-center ">
                 <Image source={require('../../assets/images/welcome.png')} style = {{width:wp(75), height:wp(75)}}/>
             </View>
-            <TouchableOpacity onPress={() => navigation.navigate('Home')} className = "bg-emerald-500 mx-5 p-5 rounded-full">
-                <Text style={{fontSize: wp(7)}} className = "text-center font-bold text-bold text-white text-xl">
+            <TouchableOpacity onPress={() => navigation.navigate('Home')} className = "bg-fuchsia-500 mx-4 p-4 rounded-full">
+                <Text style={{fontSize: wp(7)}} className = "shadow-lg text-center font-bold text-bold text-white text-xl">
                     Get Started
                 </Text>
             </TouchableOpacity>
