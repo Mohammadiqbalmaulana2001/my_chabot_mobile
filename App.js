@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function App() {
   return (
-    <SafeAreaView>
+    <SafeAreaView className="bg-pink-300">
       <Text>App</Text>
     </SafeAreaView>
   );
