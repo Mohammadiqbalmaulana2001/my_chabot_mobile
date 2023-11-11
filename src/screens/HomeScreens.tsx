@@ -12,6 +12,7 @@ export default function HomeScreens() {
     const [messages, setMessages] = useState(dummyMessages);
     const [recording, setRecording] = useState(false);
     const [speaking, setSpeaking] = useState(true);
+    const [result, setResult] = useState('');
 
         const speechStartHandler = e => {
             console.log('speech start event', e);
@@ -22,8 +23,8 @@ export default function HomeScreens() {
         };
         const speechResultsHandler = e => {
             console.log('speech event: ',e);
-            // const text = e.value[0];
-            // setResult(text);
+            const text = e.value[0];
+            setResult(text);
             
         };
         
@@ -84,6 +85,7 @@ export default function HomeScreens() {
         };
     }, []);
 
+    console.log('result', result);
     return (
     <View className="flex-1 bg-white">
         <SafeAreaView className= "flex-1 flex mx-5">
